@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Rasha 🫐</title>
+
+    <link rel="stylesheet" href="CSS/colors.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/decorations.css">
+    <link rel="stylesheet" href="CSS/animations.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         DECORATIONS
+    ====================================================== -->
+
+    <div class="decorations">
+
+        <span class="decoration decoration-1">ꕤ</span>
+        <span class="decoration decoration-2">⸱៰𖤐 ࣭⸰</span>
+        <span class="decoration decoration-3">ꕤ</span>
+        <span class="decoration decoration-4"> 𐙚</span>
+        <span class="decoration decoration-5">♡</span>
+        <span class="decoration decoration-6">˖ ࣪ ✦ ꒷</span>
+        <span class="decoration decoration-7">⸱៰𖤐⸰</span>
+        <span class="decoration decoration-8">♡</span>
+        <span class="decoration decoration-9">. 𐙚</span>
+        <span class="decoration decoration-10">ᐢ..ᐢ</span>
+        <span class="decoration decoration-11">✧</span>
+        <span class="decoration decoration-12">ꕤ</span>
+        <span class="decoration decoration-13">ᐢ..ᐢ</span>
+        <span class="decoration decoration-14">‹3</span>
+
+    </div>
+
+
+    <!-- =====================================================
+         PASSWORD PAGE
+    ====================================================== -->
+
+    <main id="passwordPage" class="page active-page">
+
+        <section class="center-card">
+
+            <div class="page-image">
+                <img src="images/password-image.png" alt="">
+            </div>
+
+            <h1> 𐙚~Something special awaits</h1>
+
+            <p class="subtitle">
+                Enter the secret password
+            </p>
+
+            <div id="passwordDisplay" class="password-display">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="number-pad">
+
+                <button onclick="addPasswordNumber('1')">1</button>
+                <button onclick="addPasswordNumber('2')">2</button>
+                <button onclick="addPasswordNumber('3')">3</button>
+
+                <button onclick="addPasswordNumber('4')">4</button>
+                <button onclick="addPasswordNumber('5')">5</button>
+                <button onclick="addPasswordNumber('6')">6</button>
+
+                <button onclick="addPasswordNumber('7')">7</button>
+                <button onclick="addPasswordNumber('8')">8</button>
+                <button onclick="addPasswordNumber('9')">9</button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         ENVELOPE PAGE
+    ====================================================== -->
+
+    <main id="envelopePage" class="page">
+
+        <section class="content-card">
+
+            <div class="text-section">
+
+                <p class="small-title">A little surprise for you ♡</p>
+
+                <h1>Happy Birthday, Reeshaa~!</h1>
+
+                <p>
+                    There is something waiting for you.
+                    Open it when you're ready.˖ ࣪ ꒷
+                </p>
+
+            </div>
+
+            <div class="image-section envelope-section">
+
+                <button class="image-button" onclick="openEnvelope()">
+
+                    <div class="envelope">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body"></div>
+                        <div class="envelope-heart">♡</div>
+                    </div>
+
+                </button>
+
+                <p class="image-hint">
+                    Click the envelope ‹3
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         OPENED ENVELOPE PAGE
+    ====================================================== -->
+
+    <main id="openedEnvelopePage" class="page">
+
+        <section class="content-card">
+
+            <div class="image-section">
+
+                <img
+                    src="images/envelope-open.png"
+                    alt="Open envelope"
+                    class="main-image"
+                >
+
+            </div>
+
+            <div class="text-section">
+
+                <p class="small-title">For Totyy ♡</p>
+
+                <h1>A little letter</h1>
+
+                <p>
+                    I made something small for you,᭪݁ৎ..
+                    just because you deserve something sweet.
+                </p>
+
+                <button class="cute-button" onclick="openLetterPage()">
+                    Read the letter
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         LETTER PAGE
+    ====================================================== -->
+
+    <main id="letterPage" class="page">
+
+        <section class="letter-card">
+
+            <div class="letter-image">
+
+                <img
+                    src="images/letter.png"
+                    alt="Letter"
+                    class="main-image"
+                >
+
+            </div>
+
+            <div class="letter-content">
+
+                <p class="small-title">Dear Rasha~‹3</p>
+
+                <h1>Happy Birthday!</h1>
+
+                <p>
+                    I hope this little surprise makes you smile.
+                </p>
+
+                <p>
+                    You deserve beautiful moments,
+                    happy memories, and a year full of
+                    wonderful things.
+                </p>
+
+                <p>
+                    Thank you for being someone
+                    worth celebrating.
+                </p>
+
+                <button class="cute-button" onclick="showPage('messagePage')">
+                    Next~
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         MESSAGE PAGE
+    ====================================================== -->
+
+    <main id="messagePage" class="page">
+
+        <section class="content-card">
+
+            <div class="text-section">
+
+                <p class="small-title">One more thing ♡</p>
+
+                <h1>A message for you</h1>
+
+                <div class="message-box">
+
+                    <p>
+                        I hope your new year is filled with
+                        little moments that make your heart happy.
+                    </p>
+
+                    <p>
+                        Keep smiling, keep dreaming,
+                        and never forget how special you are.
+                    </p>
+
+                </div>
+
+                <button class="cute-button" onclick="openFlowerPage()">
+                    Next 
+                </button>
+
+            </div>
+
+            <div class="image-section">
+
+                <img
+                    src="images/message.png"
+                    alt="Birthday message"
+                    class="main-image"
+                >
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FLOWER PAGE
+    ====================================================== -->
+
+    <main id="flowerPage" class="page">
+
+        <section class="content-card">
+
+            <div class="image-section">
+
+                <img
+                    src="images/flowers.png"
+                    alt="Flowers"
+                    class="main-image"
+                >
+
+            </div>
+
+            <div class="text-section">
+
+                <p class="small-title">A little flower for you ♡</p>
+
+                <h1>For your special day</h1>
+
+                <p>
+                    May your days bloom with happiness,
+                    kindness and beautiful surprises.
+                </p>
+
+                <button class="cute-button" onclick="openSongPage()">
+                    Next 
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         SONG PAGE
+    ====================================================== -->
+
+    <main id="songPage" class="page">
+
+        <section class="content-card">
+
+            <div class="text-section">
+
+                <p class="small-title">A song for you ♡</p>
+
+                <h1>Favorite Song</h1>
+
+                <p>
+                    Take a little moment,
+                    put your headphones on,
+                    and enjoy.
+                </p>
+
+                <audio
+                    id="birthdaySong"
+                    controls
+                    preload="metadata"
+                >
+                    <source
+                        src="music/favorite-song.mp3"
+                        type="audio/mpeg"
+                    >
+
+                    Your browser does not support audio.
+                </audio>
+
+                <button class="cute-button" onclick="openFinalPage()">
+                    Next 
+                </button>
+
+            </div>
+
+            <div class="image-section">
+
+                <img
+                    src="images/song.png"
+                    alt="Music"
+                    class="main-image"
+                >
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FINAL PAGE
+    ====================================================== -->
+
+    <main id="finalPage" class="page">
+
+        <section class="final-card">
+
+            <div class="final-image">
+
+                <img
+                    src="images/final.png"
+                    alt="Happy Birthday"
+                    class="main-image"
+                >
+
+            </div>
+
+            <div class="final-content">
+
+                <p class="small-title">From Seemar ♡</p>
+
+                <h1>Happy Birthday, Eva!</h1>
+
+                <p>
+                    I hope you liked your little surprise.
+                </p>
+
+                <p>
+                    May this year bring you
+                    everything beautiful.
+                </p>
+
+                <button
+                    class="cute-button"
+                    onclick="goBack('songPage')"
+                >
+                    Go Back
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         ERROR POPUP
+    ====================================================== -->
+
+    <div id="errorOverlay" class="popup-overlay">
+
+        <div class="error-popup">
+
+            <div class="error-header">
+
+                <h2>Error</h2>
+
+                <img
+                    src="images/error-image.png"
+                    alt="Error"
+                    class="error-icon"
+                >
+
+                <span class="close-popup">×</span>
+
+            </div>
+
+
+            <div class="popup-line"></div>
+
+
+            <div class="error-content">
+
+                <div class="error-text">
+
+                    <p class="oops">Oops!</p>
+
+                    <p>Wrong password</p>
+
+                </div>
+
+                <img
+                    src="images/hint-image.png"
+                    alt="Wrong password"
+                    class="error-second-image"
+                >
+
+            </div>
+
+
+            <div class="popup-line"></div>
+
+
+            <div class="error-footer">
+
+                <button
+                    id="tryAgainButton"
+                    class="cute-button"
+                >
+                    Try Again
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/buttons.js"></script>
+    <script src="JavaScript/animations.js"></script>
+
+</body>
+</html>
