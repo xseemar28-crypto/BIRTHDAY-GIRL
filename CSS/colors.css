@@ -1,0 +1,18 @@
+:root {
+
+    --pink-light: #fff1f5;
+    --pink-soft: #ffe1ea;
+    --pink: #f6b6c8;
+    --pink-medium: #ed91ac;
+    --pink-dark: #c85c7c;
+
+    --cream: #fffaf7;
+    --white: #ffffff;
+
+    --text-dark: #694451;
+    --text-soft: #8d6975;
+
+    --shadow:
+        0 12px 35px rgba(150, 80, 105, 0.12);
+
+}
