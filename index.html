@@ -127,44 +127,106 @@
     </main>
 
 
-    <!-- =====================================================
-         OPENED ENVELOPE PAGE
-    ====================================================== -->
+<main id="openedEnvelopePage" class="page">
 
-    <main id="openedEnvelopePage" class="page">
+    <div class="opened-envelope">
 
-        <section class="content-card">
+        <!-- الظرف الخلفي -->
+        <img
+            src="images/envelope-back.png"
+            alt=""
+            class="envelope-back"
+        >
 
-            <div class="image-section">
+        <!-- الأشياء الخارجة من الظرف -->
+        <div class="envelope-items">
 
-                <img
-                    src="images/envelope-open.png"
-                    alt="Open envelope"
-                    class="main-image"
+            <!-- اليسار: الزهور + شرايط الصور -->
+            <div class="left-items">
+
+                <button
+                    class="envelope-item flower-item"
+                    onclick="openFlowerPage()"
                 >
-
-            </div>
-
-            <div class="text-section">
-
-                <p class="small-title">For Totyy ♡</p>
-
-                <h1>A little letter</h1>
-
-                <p>
-                    I made something small for you,᭪݁ৎ..
-                    just because you deserve something sweet.
-                </p>
-
-                <button class="cute-button" onclick="openLetterPage()">
-                    Read the letter
+                    <img
+                        src="images/flower.png"
+                        alt="Flowers"
+                    >
                 </button>
 
+                <div class="photo-strips">
+
+                    <img
+                        src="images/photo-strip-1-1.png"
+                        alt=""
+                    >
+
+                    <img
+                        src="images/photo-strip-1-2.png"
+                        alt=""
+                    >
+
+                    <img
+                        src="images/photo-strip-1-3.png"
+                        alt=""
+                    >
+
+                    <img
+                        src="images/photo-strip-2-1.png"
+                        alt=""
+                    >
+
+                    <img
+                        src="images/photo-strip-2-2.png"
+                        alt=""
+                    >
+
+                    <img
+                        src="images/photo-strip-2-3.png"
+                        alt=""
+                    >
+
+                </div>
+
             </div>
 
-        </section>
 
-    </main>
+            <!-- الوسط: الرسائل -->
+            <button
+                class="envelope-item letters-item"
+                onclick="openLetterPage()"
+            >
+                <img
+                    src="images/letter.png"
+                    alt="Letters"
+                >
+            </button>
+
+
+            <!-- اليمين: الأغنية -->
+            <button
+                class="envelope-item song-item"
+                onclick="openSongPage()"
+            >
+                <img
+                    src="images/song.png"
+                    alt="Favorite song"
+                >
+            </button>
+
+        </div>
+
+
+        <!-- الظرف الأمامي فوق الأشياء -->
+        <img
+            src="images/envelope-front.png"
+            alt=""
+            class="envelope-front"
+        >
+
+    </div>
+
+</main>
 
 
     <!-- =====================================================
