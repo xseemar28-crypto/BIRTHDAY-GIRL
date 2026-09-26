@@ -138,17 +138,12 @@ p {
 ===================================================== */
 
 .page-image {
-
-    width: 180px;
-    height: 180px;
-
+    width: 220px;
+    height: 220px;
     margin: 0 auto 25px;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
 }
 
 .page-image img {
