@@ -355,7 +355,7 @@ p {
 
 
 /* =====================================================
-   ENVELOPE
+   CLOSED ENVELOPE
 ===================================================== */
 
 .envelope-section {
@@ -374,81 +374,22 @@ p {
 
 }
 
-.envelope {
+.envelope-image {
 
-    position: relative;
+    max-height: 350px;
 
-    width: 240px;
-    height: 160px;
+    border-radius: 0;
 
-    filter:
-        drop-shadow(
-            0 10px 15px
-            rgba(120, 60, 80, 0.15)
-        );
-
-    transition: transform 0.25s ease;
+    transition:
+        transform 0.3s ease;
 
 }
 
-.image-button:hover .envelope {
+.image-button:hover .envelope-image {
 
     transform:
         translateY(-8px)
         rotate(-2deg);
-
-}
-
-.envelope-body {
-
-    position: absolute;
-
-    inset: 0;
-
-    background: var(--pink);
-
-    border-radius: 8px;
-
-}
-
-.envelope-flap {
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 0;
-    height: 0;
-
-    border-left:
-        120px solid transparent;
-
-    border-right:
-        120px solid transparent;
-
-    border-top:
-        85px solid var(--pink-medium);
-
-    z-index: 2;
-
-}
-
-.envelope-heart {
-
-    position: absolute;
-
-    z-index: 3;
-
-    left: 50%;
-    top: 55%;
-
-    transform:
-        translate(-50%, -50%);
-
-    color: white;
-
-    font-size: 40px;
 
 }
 
@@ -496,6 +437,262 @@ p {
 
     transform:
         translateY(-2px);
+
+}
+
+
+/* =====================================================
+   OPENED ENVELOPE
+===================================================== */
+
+.opened-envelope {
+
+    position: relative;
+
+    width: min(900px, 95vw);
+
+    height: 600px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   ENVELOPE BACK
+   خلف كل الأشياء
+===================================================== */
+
+.envelope-back {
+
+    position: absolute;
+
+    width: 100%;
+    height: auto;
+
+    left: 50%;
+    bottom: 45px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 1;
+
+    display: block;
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   ITEMS COMING OUT
+===================================================== */
+
+.envelope-items {
+
+    position: absolute;
+
+    width: 82%;
+
+    left: 50%;
+    top: 25px;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    z-index: 3;
+
+}
+
+
+/* =====================================================
+   CLICKABLE ENVELOPE ITEMS
+===================================================== */
+
+.envelope-item {
+
+    border: none;
+
+    background: transparent;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =====================================================
+   LEFT
+   FLOWER + PHOTO STRIPS
+===================================================== */
+
+.left-items {
+
+    width: 35%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 80px;
+
+}
+
+
+/* =====================================================
+   FLOWER
+===================================================== */
+
+.flower-item {
+
+    width: 135px;
+
+}
+
+.flower-item img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   PHOTO STRIPS
+===================================================== */
+
+.photo-strips {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+.photo-strips img {
+
+    width: 65px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   CENTER
+   LETTERS
+===================================================== */
+
+.letters-item {
+
+    width: 175px;
+
+    margin-top: 20px;
+
+}
+
+.letters-item img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   RIGHT
+   SONG
+===================================================== */
+
+.song-item {
+
+    width: 155px;
+
+    margin-top: 75px;
+
+}
+
+.song-item img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   ENVELOPE FRONT
+   قدام كل الأشياء
+===================================================== */
+
+.envelope-front {
+
+    position: absolute;
+
+    width: 100%;
+    height: auto;
+
+    left: 50%;
+    bottom: 0;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 10;
+
+    display: block;
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   OPENED ENVELOPE HOVER
+===================================================== */
+
+.envelope-item img {
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+.envelope-item:hover img {
+
+    transform:
+        translateY(-7px);
 
 }
 
@@ -891,258 +1088,10 @@ audio {
 
     }
 
-}
 
-
-@media (max-width: 400px) {
-
-    h1 {
-
-        font-size: 30px;
-
-    }
-
-    .content-card {
-
-        padding: 25px 17px;
-
-    }
-
-    .error-popup {
-
-        padding: 20px;
-
-    }
-
-}
-/* =====================================================
-   OPENED ENVELOPE
-===================================================== */
-
-.opened-envelope {
-    position: relative;
-    width: min(900px, 95vw);
-    height: 600px;
-    margin: auto;
-}
-
-
-/* =========================================
-   ENVELOPE BACK
-   خلف الأشياء مباشرة
-========================================= */
-
-.envelope-back {
-    position: absolute;
-
-    width: 100%;
-    height: auto;
-
-    left: 50%;
-    bottom: 45px;
-
-    transform: translateX(-50%);
-
-    z-index: 1;
-
-    display: block;
-}
-
-
-/* =========================================
-   ITEMS
-========================================= */
-
-.envelope-items {
-    position: absolute;
-
-    width: 82%;
-
-    left: 50%;
-    top: 25px;
-
-    transform: translateX(-50%);
-
-    display: flex;
-
-    align-items: flex-start;
-    justify-content: space-between;
-
-    z-index: 3;
-}
-
-
-/* =========================================
-   CLICKABLE ITEMS
-========================================= */
-
-.envelope-item {
-
-    border: none;
-
-    background: transparent;
-
-    padding: 0;
-
-    cursor: pointer;
-
-}
-
-
-/* =========================================
-   LEFT
-   FLOWER + PHOTO STRIPS
-========================================= */
-
-.left-items {
-
-    width: 35%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    margin-top: 80px;
-
-}
-
-
-/* Flower */
-
-.flower-item {
-
-    width: 135px;
-
-}
-
-.flower-item img {
-
-    width: 100%;
-
-    display: block;
-
-}
-
-
-/* Photo strips */
-
-.photo-strips {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 4px;
-
-}
-
-.photo-strips img {
-
-    width: 65px;
-
-    height: auto;
-
-    display: block;
-
-}
-
-
-/* =========================================
-   CENTER
-   LETTERS
-========================================= */
-
-.letters-item {
-
-    width: 175px;
-
-    margin-top: 20px;
-
-}
-
-.letters-item img {
-
-    width: 100%;
-
-    display: block;
-
-}
-
-
-/* =========================================
-   RIGHT
-   SONG
-========================================= */
-
-.song-item {
-
-    width: 155px;
-
-    margin-top: 75px;
-
-}
-
-.song-item img {
-
-    width: 100%;
-
-    display: block;
-
-}
-
-
-/* =========================================
-   ENVELOPE FRONT
-   قدام كل العناصر
-========================================= */
-
-.envelope-front {
-
-    position: absolute;
-
-    width: 100%;
-    height: auto;
-
-    left: 50%;
-    bottom: 0;
-
-    transform: translateX(-50%);
-
-    z-index: 10;
-
-    display: block;
-
-    pointer-events: none;
-}
-
-
-/* =========================================
-   HOVER
-========================================= */
-
-.envelope-item img {
-
-    transition:
-        transform 0.3s ease;
-
-}
-
-.envelope-item:hover img {
-
-    transform:
-        translateY(-7px);
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 700px) {
+    /* =============================================
+       OPENED ENVELOPE - MOBILE
+    ============================================= */
 
     .opened-envelope {
 
@@ -1230,3 +1179,32 @@ audio {
     }
 
 }
+
+
+/* =====================================================
+   VERY SMALL SCREENS
+===================================================== */
+
+@media (max-width: 400px) {
+
+    h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .content-card {
+
+        padding:
+            25px 17px;
+
+    }
+
+
+    .error-popup {
+
+        padding: 20px;
+
+    }
+
